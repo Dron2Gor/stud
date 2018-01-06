@@ -12,10 +12,12 @@ public class TestThreads {
         Future<Integer> i=exec.submit(new FibonacciThreads(6));
         Future<Integer> j=exec.submit(new FibonacciThreads(4));
         Future<Integer> f=exec.submit(new FibonacciThreads(10));
+        Future<Integer> h=exec.submit(new FibonacciThreads(10));
         exec.shutdown();
         System.out.println(f.get());
         System.out.println(j.get());
         System.out.println(i.get());
+        System.out.println(h.get());
 
     }
 }
