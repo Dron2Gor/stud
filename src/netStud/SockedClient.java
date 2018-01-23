@@ -10,7 +10,7 @@ public class SockedClient {
     public static void main(String[] args) {
         try{
             Socket socket=new Socket();
-            socket.connect(new InetSocketAddress("localhost",13),2000);
+            socket.connect(new InetSocketAddress("localhost",8189),2000);
             BufferedReader reader=new BufferedReader(new InputStreamReader(socket.getInputStream()));
             while (reader.ready())
                 System.out.println(reader.readLine());
