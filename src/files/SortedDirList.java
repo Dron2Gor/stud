@@ -15,7 +15,7 @@ public class SortedDirList {
         return list;
     }
 
-    public static String[] list(String regex) {
+    public static String[] list(final String regex) {
         list = path.list(new FilenameFilter() {
             Pattern pattern = Pattern.compile(regex);
 
